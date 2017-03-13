@@ -40,9 +40,9 @@ Contributor(s):
     <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
     <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
     <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
-    <property name="hibernate.connection.username">system</property>
-    <property name="hibernate.connection.password">system</property>
-    <property name="hbm2ddl.auto">update</property>
+    <property name="hibernate.connection.username">markgen</property>
+    <property name="hibernate.connection.password">markgen</property>
+    <property name="hbm2ddl.auto">create</property>
     <mapping class="" file="" jar="" package="" resource="markgen.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

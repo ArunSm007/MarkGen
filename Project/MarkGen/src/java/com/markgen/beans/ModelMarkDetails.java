@@ -11,9 +11,18 @@ package com.markgen.beans;
  * @author Student
  */
 public class ModelMarkDetails {
+    private int sno;
     private String studentId;
     private String subjectId;
     private int mark;
+
+    public int getSno() {
+        return sno;
+    }
+
+    public void setSno(int sno) {
+        this.sno = sno;
+    }
 
     public String getStudentId() {
         return studentId;

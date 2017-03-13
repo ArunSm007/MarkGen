@@ -2,29 +2,21 @@ package com.markgen.beans;
 
 
 public class AddressDetails {
-  private String studentId;
-  private String address1;
-  private String address2;
-  private String address3;
-  private String city;
-  private String state;
-  private String country;
-  private String postalCode;
+    private int sno;
+    private String address1;
+    private String address2;
+    private String address3;
+    private String city;
+    private String state;
+    private String country;
+    private String postalCode;
 
-    public String getPostalCode() {
-        return postalCode;
+    public int getSno() {
+        return sno;
     }
 
-    public void setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
-    }
-
-    public String getStudentId() {
-        return studentId;
-    }
-
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
+    public void setSno(int sno) {
+        this.sno = sno;
     }
 
     public String getAddress1() {
@@ -75,13 +67,12 @@ public class AddressDetails {
         this.country = country;
     }
 
-    public String getPostal_Code() {
-        return postal_Code;
+    public String getPostalCode() {
+        return postalCode;
     }
 
-    public void setPostal_Code(String postal_Code) {
-        this.postal_Code = postal_Code;
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
     }
-  private String postal_Code;
              
 }

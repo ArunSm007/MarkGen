@@ -11,11 +11,20 @@ package com.markgen.beans;
  * @author Student
  */
 public class SubjectStudentDetails {
+    private int sno;
     private String studentId;
     private String facultyId;
     private String subjectId;
     private int year;
     private int semester;
+
+    public int getSno() {
+        return sno;
+    }
+
+    public void setSno(int sno) {
+        this.sno = sno;
+    }
 
     public String getStudentId() {
         return studentId;

@@ -11,6 +11,7 @@ package com.markgen.beans;
  * @author Student
  */
 public class AdvisorDetails {
+    
     private String staffId;
     private String classId;
 

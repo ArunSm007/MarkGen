@@ -1,5 +1,7 @@
 package com.markgen.beans;
 
+import java.util.Date;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,59 +13,60 @@ package com.markgen.beans;
  * @author Student
  */
 public class PersonalDetails {
-    private int personalId;
-    private String personalName;
-    private String personalGendar;
-    private int personalDob;
-    private String personalMail;
-    private float personalNumber;
+    private int sno;
+    private String name;
+    private String gender;
+    private Date dob;
+    private String mail;
+    private Long mobileNumber;
 
-    public int getPersonalId() {
-        return personalId;
+    public int getSno() {
+        return sno;
     }
 
-    public void setPersonalId(int personalId) {
-        this.personalId = personalId;
+    public void setSno(int sno) {
+        this.sno = sno;
     }
 
-    public String getPersonalName() {
-        return personalName;
+    public String getName() {
+        return name;
     }
 
-    public void setPersonalName(String personalName) {
-        this.personalName = personalName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getPersonalGendar() {
-        return personalGendar;
+    public String getGender() {
+        return gender;
     }
 
-    public void setPersonalGendar(String personalGendar) {
-        this.personalGendar = personalGendar;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    public int getPersonalDob() {
-        return personalDob;
+    public Date getDob() {
+        return dob;
     }
 
-    public void setPersonalDob(int personalDob) {
-        this.personalDob = personalDob;
+    public void setDob(Date dob) {
+        this.dob = dob;
     }
 
-    public String getPersonalMail() {
-        return personalMail;
+    public String getMail() {
+        return mail;
     }
 
-    public void setPersonalMail(String personalMail) {
-        this.personalMail = personalMail;
+    public void setMail(String mail) {
+        this.mail = mail;
     }
 
-    public float getPersonalNumber() {
-        return personalNumber;
+    public Long getMobileNumber() {
+        return mobileNumber;
     }
 
-    public void setPersonalNumber(float personalNumber) {
-        this.personalNumber = personalNumber;
+    public void setMobileNumber(Long mobileNumber) {
+        this.mobileNumber = mobileNumber;
     }
-    
+
+        
 }

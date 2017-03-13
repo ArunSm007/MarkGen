@@ -11,6 +11,7 @@ package com.markgen.beans;
  * @author Student
  */
 public class AllocatedSubjectDetails {
+    private int sno;
     private String subjectId;
     private String department;
     private int year;
@@ -18,6 +19,14 @@ public class AllocatedSubjectDetails {
 
     public int getYear() {
         return year;
+    }
+
+    public int getSno() {
+        return sno;
+    }
+
+    public void setSno(int sno) {
+        this.sno = sno;
     }
 
     public void setYear(int year) {

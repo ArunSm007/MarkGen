@@ -12,8 +12,26 @@ package com.markgen.beans;
  */
 public class StaffDetails {
     private String staffId;
+    private String staffName;
+    private String staffPassword;
     private String designation;
     private String department;
+
+    public String getStaffName() {
+        return staffName;
+    }
+
+    public void setStaffName(String staffName) {
+        this.staffName = staffName;
+    }
+
+    public String getStaffPassword() {
+        return staffPassword;
+    }
+
+    public void setStaffPassword(String staffPassword) {
+        this.staffPassword = staffPassword;
+    }
 
     public String getStaffId() {
         return staffId;

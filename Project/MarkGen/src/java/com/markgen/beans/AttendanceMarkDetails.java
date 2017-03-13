@@ -14,6 +14,25 @@ public class AttendanceMarkDetails {
     private String studentId;
     private String subjectId;
     private int mark;
+    private int semester;
+    private int sno;
+
+    public int getSno() {
+        return sno;
+    }
+
+    public void setSno(int sno) {
+        this.sno = sno;
+    }
+    
+    public int getSemester() {
+        return semester;
+    }
+
+    public void setSemester(int semester) {
+        this.semester = semester;
+    }
+    
 
     public String getStudentId() {
         return studentId;
