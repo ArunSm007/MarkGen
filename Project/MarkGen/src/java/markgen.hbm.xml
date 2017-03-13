@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<hibernate-mapping>
+    <class name="com.markgen.beans.AddressDetails" table="AddressDetails">
+    
+        <property name="studentId"></property>
+        <property name="address1"></property>
+        <property name="address2"></property>
+        <property name="address3"></property>
+        <property name="city"></property>
+        <property name="state"></property>
+        <property name="country"></property>
+        <property name="postalCode"></property>
+    
+    </class>
+     <class name="com.markgen.beans.AdvisorDetails" table="AdvisorDetails">
+    
+        <property name="staffId"></property>
+        <property name="classId"></property>
+       
+    </class>
+    <class name="com.markgen.beans.AllocatedSubjectDetails" table="AllocatedSubjectDetails">
+    
+        <property name="subjectId"></property>
+        <property name="department"></property>
+        <property name="year"></property>
+        <property name="semester"></property>
+       
+    
+    </class>
+    <class name="com.markgen.beans.AssignmentMarkDetails" table="AssignmentMarkDetails">
+    
+        <property name="studentId"></property>
+        <property name="subjectId"></property>
+        <property name="mark"></property>
+       
+    
+    </class>
+     <class name="com.markgen.beans.AttendanceMarkDetails" table="AttendanceMarkDetails">
+    
+        <property name="studentId"></property>
+        <property name="subjectId"></property>
+        <property name="mark"></property>
+    
+    </class>
+    <class name="com.markgen.beans.ClassDetails" table="ClassDetails">
+    
+        <property name="studentId"></property>
+        <property name="classId"></property>
+        <property name="section"></property>
+        <property name="departmentId"></property>
+    
+    </class>
+    <class name="com.markgen.beans.DepartmentDetails" table="DepartmentDetails">
+    
+        <property name="departmentId"></property>
+        <property name="regulationId"></property>
+        <property name="year"></property>
+        <property name="departmentName"></property>
+    
+    </class>
+     <class name="com.markgen.beans.MainInternalMarkDetails" table="MainInternalMarkDetails">
+    
+        <property name="studentId"></property>
+        <property name="subjectId"></property>
+        <property name="mark"></property>
+       
+    
+    </class>
+    <class name="com.markgen.beans.ModelMarkDetails" table="ModelMarkDetails">
+    
+        <property name="studentId"></property>
+        <property name="subjectId"></property>
+        <property name="mark"></property>
+       
+    
+    </class>
+    <class name="com.markgen.beans.ParentDetails" table="ParentDetails">
+    
+        <property name="parentId"></property>
+        <property name="studentId"></property>
+       
+    </class>
+    <class name="com.markgen.beans.PersonalDetails" table="PersonalDetails">
+    
+        <property name="personalId"></property>
+        <property name="personalName"></property>
+        <property name="personalGendar"></property>
+        <property name="personalDob"></property>
+        <property name="personalMail"></property>
+        <property name="personalNumber"></property>
+       
+    
+    </class>
+     <class name="com.markgen.beans.RegulationDetails" table="RegulationDetails">
+    
+        <property name="regualationId"></property>
+        <property name="maxTerminalMark"></property>
+        <property name="maxModelMark"></property>
+        <property name="maxAssignmentMark"></property>
+        
+       
+    
+    </class>
+    <class name="com.markgen.beans.StaffDetails" table="StaffDetails">
+    
+        <property name="staffId"></property>
+        <property name="designation"></property>
+        <property name="department"></property>
+       
+   </class>
+   <class name="com.markgen.beans.StudentDetails" table="StudentDetails">
+    
+        <property name="studentId"></property>
+        <property name="department"></property>
+        <property name="parentId"></property>
+        <property name="yearOfJoining"></property>
+        
+       
+    
+    </class>
+     <class name="com.markgen.beans.SubjectDetails" table="SubjectDetails">
+    
+        <property name="subjectId"></property>
+        <property name="subjectName"></property>
+        
+     </class>
+    <class name="com.markgen.beans.SubjectHandlingFacultyDetails" table="SubjectHandlingFacultyDetails">
+    
+        <property name="subjectId"></property>
+        <property name="staffId"></property>
+        
+     </class>
+      <class name="com.markgen.beans.SubjectStudentDetails" table="SubjectStudentDetails">
+    
+        <property name="studentId"></property>
+        <property name="facultyId"></property>
+        <property name="subjectId"></property>
+        <property name="year"></property>
+        <property name="semester"></property> 
+       
+    
+    </class>
+    <class name="com.markgen.beans.TerminalMarkDetails1" table="TerminalMarkDetails1">
+    
+        <property name="studentId"></property>
+        <property name="subjectId"></property>
+        <property name="mark"></property>
+       
+       
+    
+    </class>
+     <class name="com.markgen.beans.TerminalMarkDetails2" table="TerminalMarkDetails2">
+    
+        <property name="studentId"></property>
+        <property name="subjectId"></property>
+        <property name="mark"></property>
+       
+       
+    
+    </class>
+    
+    
+    
+    
+</hibernate-mapping>
+    
