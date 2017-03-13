@@ -3,6 +3,146 @@
  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
 <hibernate-mapping>
+    
+    <class name="com.markgen.beans.DepartmentDetails" table="DepartmentDetails">
+        <id name="departmentId">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="regulationId"></property>
+        <property name="departmentName"></property>
+        <list name="classDetailses" cascade="save-update,delete,delete-orphan" lazy="false">
+            <key column="departmentId" />
+            <index column="type"/>
+            <one-to-many class="com.markgen.beans.ClassDetails"/>
+        </list>
+        <list name="semesterDetailses" cascade="save-update,delete,delete-orphan" lazy="false">
+            <key column="departmentId" />
+            <index column="type"/>
+            <one-to-many class="com.markgen.beans.SemesterDetails"/>
+        </list>
+    </class>
+    
+    <class name="com.markgen.beans.SemesterDetails" table="SemesterDetails">
+        
+        <id name="sno">
+            <generator class="assigned"></generator>
+        </id>
+        <list name="subjectDetailses" cascade="save-update,delete,delete-orphan" lazy="false">
+            <key column="sno" />
+            <index column="type"/>
+            <one-to-many class="com.markgen.beans.SubjectDetails"/>
+        </list>
+            
+    </class>
+    
+    <class name="com.markgen.beans.ClassDetails" table="ClassDetails">
+        
+        <id name="classId">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="year"></property>
+        <property name="section"></property>
+        <list name="studentsId" cascade="save-update,delete,delete-orphan" lazy="false">
+            <key column="classId" />
+            <index column="type"/>
+            <one-to-many class="com.markgen.beans.ClassStudentDetails"/>
+        </list>
+        <list name="faculties" cascade="save-update,delete,delete-orphan" lazy="false">
+            <key column="classId" />
+            <index column="type"/>
+            <one-to-many class="com.markgen.beans.SubjectHandlingFacultyDetails"/>
+        </list>
+        <list name="subjectStudentsList" cascade="save-update,delete,delete-orphan" lazy="false">
+            <key column="classId" />
+            <index column="type"/>
+            <one-to-many class="com.markgen.beans.SubjectStudentDetails"/>
+        </list>
+    </class>
+    
+    <class name="com.markgen.beans.SubjectHandlingFacultyDetails" table="SubjectHandlingFacultyDetails">
+        <id name="sno">
+            <generator class="increment"></generator>
+        </id>
+        <property name="subjectId"></property>
+        <property name="staffId"></property>
+        
+    </class>
+    
+    <class name="com.markgen.beans.SubjectStudentDetails" table="SubjectStudentDetails">
+        <id name="sno">
+            <generator class="increment"></generator>
+        </id>
+        <property name="studentId"></property>
+        <property name="subjectId"></property>
+       
+    </class>
+    
+    <class name="com.markgen.beans.ClassStudentDetails" table="ClassStudentDetails">
+    
+        <id name="sno">
+            <generator class="increment"></generator>
+        </id>
+        <property name="studentId"></property>
+       
+    </class>
+    
+    <class name="com.markgen.beans.SubjectDetails" table="SubjectDetails">
+        
+        <id name="subjectId">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="subjectName"></property>
+        <property name="subjectType"></property>
+        
+    </class>
+     
+    <class name="com.markgen.beans.AdvisorDetails" table="AdvisorDetails">
+    
+        <id name="staffId">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="classId"></property>
+       
+    </class>
+    
+<!--    <class name="com.markgen.beans.AllocatedSubjectDetails" table="AllocatedSubjectDetails">
+        <id name="sno">
+            <generator class="increment"></generator>
+        </id>
+        <property name="subjectId"></property>
+        <property name="department"></property>
+        <property name="year"></property>
+        <property name="semester"></property>
+       
+    </class>-->
+    
+    <class name="com.markgen.beans.StudentDetails" table="StudentDetails">
+        <id name="studentId">
+            <generator class="assigned"></generator>
+        </id>
+        <property name="department"></property>
+        <property name="yearOfJoining"></property>
+        <one-to-one name="parentDetails" cascade="all" lazy="false"/>
+        <one-to-one name="personalDetails" cascade="all" lazy="false"/>
+    </class>
+    
+    <class name="com.markgen.beans.ParentDetails" table="ParentDetails">
+        <id name="sno">
+            <generator class="increment"></generator>
+        </id>
+        <property name="fatherName"></property>
+        <property name="motherName"></property>
+        <property name="gaurdianName"></property>
+        <property name="mobileNumber"></property>
+        <property name="email"></property>
+        <list name="addressDetails" cascade="save-update,delete,delete-orphan" lazy="false">
+            <key column="sno" />
+            <index column="type"/>
+            <one-to-many class="com.markgen.beans.AddressDetails"/>
+        </list>
+       
+    </class>
+    
     <class name="com.markgen.beans.AddressDetails" table="AddressDetails">
         
         <id name="sno">
@@ -17,28 +157,20 @@
         <property name="postalCode"></property>
     
     </class>
-     
-    <class name="com.markgen.beans.AdvisorDetails" table="AdvisorDetails">
     
-        <id name="staffId">
-            <generator class="assigned"></generator>
-        </id>
-        <property name="classId"></property>
-       
-    </class>
-    
-    <class name="com.markgen.beans.AllocatedSubjectDetails" table="AllocatedSubjectDetails">
+    <class name="com.markgen.beans.PersonalDetails" table="PersonalDetails">
         <id name="sno">
             <generator class="increment"></generator>
         </id>
-        <property name="subjectId"></property>
-        <property name="department"></property>
-        <property name="year"></property>
-        <property name="semester"></property>
+        <property name="name"></property>
+        <property name="gender"></property>
+        <property name="dob"></property>
+        <property name="mail"></property>
+        <property name="mobileNumber"></property>
        
     </class>
     
-     <class name="com.markgen.beans.AssignmentMarkDetails" table="AssignmentMarkDetails">
+    <class name="com.markgen.beans.AssignmentMarkDetails" table="AssignmentMarkDetails">
         <id name="sno">
             <generator class="increment"></generator>
         </id>
@@ -63,26 +195,6 @@
     
     </class>
     
-    <class name="com.markgen.beans.ClassDetails" table="ClassDetails">
-        
-        <id name="classId">
-            <generator class="assigned"></generator>
-        </id>
-        <property name="section"></property>
-        <property name="departmentId"></property>
-    
-    </class>
-    
-    <class name="com.markgen.beans.DepartmentDetails" table="DepartmentDetails">
-        <id name="departmentId">
-            <generator class="assigned"></generator>
-        </id>
-        <property name="regulationId"></property>
-        <property name="year"></property>
-        <property name="departmentName"></property>
-    
-    </class>
-    
     <class name="com.markgen.beans.MainInternalMarkDetails" table="MainInternalMarkDetails">
         <id name="sno">
             <generator class="increment"></generator>
@@ -100,30 +212,6 @@
         <property name="studentId"></property>
         <property name="subjectId"></property>
         <property name="mark"></property>
-       
-    </class>
-    
-    <class name="com.markgen.beans.ParentDetails" table="ParentDetails">
-        <id name="sno">
-            <generator class="increment"></generator>
-        </id>
-        <property name="fatherName"></property>
-        <property name="motherName"></property>
-        <property name="gaurdianName"></property>
-        <property name="mobileNumber"></property>
-        <property name="email"></property>
-       
-    </class>
-    
-    <class name="com.markgen.beans.PersonalDetails" table="PersonalDetails">
-        <id name="sno">
-            <generator class="increment"></generator>
-        </id>
-        <property name="name"></property>
-        <property name="gender"></property>
-        <property name="dob"></property>
-        <property name="mail"></property>
-        <property name="mobileNumber"></property>
        
     </class>
     
@@ -148,46 +236,7 @@
         <property name="department"></property>
        
     </class>
-    
-    <class name="com.markgen.beans.StudentDetails" table="StudentDetails">
-        <id name="studentId">
-            <generator class="assigned"></generator>
-        </id>
-        <property name="department"></property>
-        <property name="yearOfJoining"></property>
         
-    </class>
-    
-    <class name="com.markgen.beans.SubjectDetails" table="SubjectDetails">
-        
-        <id name="subjectId">
-            <generator class="assigned"></generator>
-        </id>
-        <property name="subjectName"></property>
-        
-    </class>
-    
-    <class name="com.markgen.beans.SubjectHandlingFacultyDetails" table="SubjectHandlingFacultyDetails">
-        <id name="sno">
-            <generator class="increment"></generator>
-        </id>
-        <property name="subjectId"></property>
-        <property name="staffId"></property>
-        
-    </class>
-    
-    <class name="com.markgen.beans.SubjectStudentDetails" table="SubjectStudentDetails">
-        <id name="sno">
-            <generator class="increment"></generator>
-        </id>
-        <property name="studentId"></property>
-        <property name="facultyId"></property>
-        <property name="subjectId"></property>
-        <property name="year"></property>
-        <property name="semester"></property> 
-       
-    </class>
-    
     <class name="com.markgen.beans.TerminalMarkDetails1" table="TerminalMarkDetails1">
         <id name="sno">
             <generator class="increment"></generator>

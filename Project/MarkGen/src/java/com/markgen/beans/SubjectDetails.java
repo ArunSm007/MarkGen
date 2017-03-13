@@ -13,7 +13,16 @@ package com.markgen.beans;
 public class SubjectDetails {
     private String subjectId;
     private String subjectName;
+    private String subjectType;
 
+    public String getSubjectType() {
+        return subjectType;
+    }
+
+    public void setSubjectType(String subjectType) {
+        this.subjectType = subjectType;
+    }
+    
     public String getSubjectId() {
         return subjectId;
     }

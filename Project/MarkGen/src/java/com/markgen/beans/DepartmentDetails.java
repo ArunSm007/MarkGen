@@ -15,9 +15,25 @@ import java.util.List;
 public class DepartmentDetails {
     private int departmentId;
     private String regulationId;
-    private String year;
     private String departmentName;
+    private List<SemesterDetails> semesterDetailses;
     private List<ClassDetails> classDetailses;
+
+    public List<SemesterDetails> getSemesterDetailses() {
+        return semesterDetailses;
+    }
+
+    public void setSemesterDetailses(List<SemesterDetails> semesterDetailses) {
+        this.semesterDetailses = semesterDetailses;
+    }
+
+    public List<ClassDetails> getClassDetailses() {
+        return classDetailses;
+    }
+
+    public void setClassDetailses(List<ClassDetails> classDetailses) {
+        this.classDetailses = classDetailses;
+    }
 
     public int getDepartmentId() {
         return departmentId;
@@ -33,14 +49,6 @@ public class DepartmentDetails {
 
     public void setRegulationId(String regulationId) {
         this.regulationId = regulationId;
-    }
-
-    public String getYear() {
-        return year;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
     }
 
     public String getDepartmentName() {

@@ -15,14 +15,22 @@ import java.util.List;
 public class ClassDetails {
     private String classId;
     private int section;
-    private String departmentId;
-    private List<String> studentsId;
+    private int year;
+    private List<ClassStudentDetails> studentsId;
 
-    public List<String> getStudentsId() {
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public List<ClassStudentDetails> getStudentsId() {
         return studentsId;
     }
 
-    public void setStudentId(List<String> studentsId) {
+    public void setStudentsId(List<ClassStudentDetails> studentsId) {
         this.studentsId = studentsId;
     }
 
@@ -40,14 +48,6 @@ public class ClassDetails {
 
     public void setSection(int section) {
         this.section = section;
-    }
-
-    public String getDepartmentId() {
-        return departmentId;
-    }
-
-    public void setDepartmentId(String departmentId) {
-        this.departmentId = departmentId;
     }
     
 }
