@@ -42,7 +42,7 @@ Contributor(s):
     <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
     <property name="hibernate.connection.username">markgen</property>
     <property name="hibernate.connection.password">markgen</property>
-    <property name="hbm2ddl.auto">create</property>
+    <property name="hbm2ddl.auto">update</property>
     <mapping class="" file="" jar="" package="" resource="markgen.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

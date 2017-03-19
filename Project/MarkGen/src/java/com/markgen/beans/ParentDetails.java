@@ -11,14 +11,23 @@ package com.markgen.beans;
  * @author Student
  */
 public class ParentDetails {
-    private String sno;
+    private String studentId;
     private String fatherName;
     private String motherName;
     private String gaurdianName;
     private Long mobileNumber;
     private String email;
     private AddressDetails addressDetails;
+    private StudentDetails studentDetails;
 
+    public StudentDetails getStudentDetails() {
+        return studentDetails;
+    }
+
+    public void setStudentDetails(StudentDetails studentDetails) {
+        this.studentDetails = studentDetails;
+    }
+    
     public String getFatherName() {
         return fatherName;
     }
@@ -67,12 +76,12 @@ public class ParentDetails {
         this.addressDetails = addressDetails;
     }
 
-    public String getSno() {
-        return sno;
+    public String getStudentId() {
+        return studentId;
     }
 
-    public void setSno(String sno) {
-        this.sno = sno;
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
     
     

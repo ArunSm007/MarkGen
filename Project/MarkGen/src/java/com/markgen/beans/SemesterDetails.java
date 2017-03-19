@@ -7,13 +7,35 @@ package com.markgen.beans;
 
 import java.util.List;
 
-/**
- *
- * @author Arun
- */
 public class SemesterDetails {
     private int sno;
-    private List<SubjectDetails> subjectDetailses;
+    private int year;
+    private int semesterNo;
+    private List<SubjectList> subjectLists;
+
+    public List<SubjectList> getSubjectLists() {
+        return subjectLists;
+    }
+
+    public void setSubjectLists(List<SubjectList> subjectLists) {
+        this.subjectLists = subjectLists;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public int getSemesterNo() {
+        return semesterNo;
+    }
+
+    public void setSemesterNo(int semesterNo) {
+        this.semesterNo = semesterNo;
+    }
 
     public int getSno() {
         return sno;
@@ -21,14 +43,6 @@ public class SemesterDetails {
 
     public void setSno(int sno) {
         this.sno = sno;
-    }
-
-    public List<SubjectDetails> getSubjectDetailses() {
-        return subjectDetailses;
-    }
-
-    public void setSubjectDetailses(List<SubjectDetails> subjectDetailses) {
-        this.subjectDetailses = subjectDetailses;
     }
     
 }

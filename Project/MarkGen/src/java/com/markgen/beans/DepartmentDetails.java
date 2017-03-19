@@ -2,19 +2,8 @@ package com.markgen.beans;
 
 import java.util.List;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Student
- */
 public class DepartmentDetails {
-    private int departmentId;
-    private String regulationId;
+    private String departmentId;
     private String departmentName;
     private List<SemesterDetails> semesterDetailses;
     private List<ClassDetails> classDetailses;
@@ -35,20 +24,12 @@ public class DepartmentDetails {
         this.classDetailses = classDetailses;
     }
 
-    public int getDepartmentId() {
+    public String getDepartmentId() {
         return departmentId;
     }
 
-    public void setDepartmentId(int departmentId) {
+    public void setDepartmentId(String departmentId) {
         this.departmentId = departmentId;
-    }
-
-    public String getRegulationId() {
-        return regulationId;
-    }
-
-    public void setRegulationId(String regulationId) {
-        this.regulationId = regulationId;
     }
 
     public String getDepartmentName() {

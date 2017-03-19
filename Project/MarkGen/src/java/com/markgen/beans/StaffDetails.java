@@ -1,5 +1,7 @@
 package com.markgen.beans;
 
+import java.util.Date;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,7 +17,34 @@ public class StaffDetails {
     private String staffName;
     private String staffPassword;
     private String designation;
+    private boolean activeStatus;
     private String department;
+    private Date loginTime;
+    private Date logoutTime;
+
+    public Date getLoginTime() {
+        return loginTime;
+    }
+
+    public void setLoginTime(Date loginTime) {
+        this.loginTime = loginTime;
+    }
+
+    public Date getLogoutTime() {
+        return logoutTime;
+    }
+
+    public void setLogoutTime(Date logoutTime) {
+        this.logoutTime = logoutTime;
+    }
+
+    public boolean isActiveStatus() {
+        return activeStatus;
+    }
+
+    public void setActiveStatus(boolean activeStatus) {
+        this.activeStatus = activeStatus;
+    }
 
     public String getStaffName() {
         return staffName;

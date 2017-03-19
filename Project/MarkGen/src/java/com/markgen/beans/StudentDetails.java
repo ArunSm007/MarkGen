@@ -11,7 +11,16 @@ package com.markgen.beans;
  * @author Student
  */
 public class StudentDetails {
-    private int studentId;
+    private String studentId;
+    private String studentName;
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
     private String department;
     private ParentDetails parentDetails;
     private int yearOfJoining;
@@ -41,7 +50,7 @@ public class StudentDetails {
         this.personalDetails = personalDetails;
     }
 
-    public int getStudentId() {
+    public String getStudentId() {
         return studentId;
     }
 
@@ -49,7 +58,7 @@ public class StudentDetails {
         return department;
     }
 
-    public void setStudentId(int studentId) {
+    public void setStudentId(String studentId) {
         this.studentId = studentId;
     }
 

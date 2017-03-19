@@ -2,7 +2,7 @@ package com.markgen.beans;
 
 
 public class AddressDetails {
-    private int sno;
+    private String studentId;
     private String address1;
     private String address2;
     private String address3;
@@ -10,13 +10,22 @@ public class AddressDetails {
     private String state;
     private String country;
     private String postalCode;
+    private ParentDetails parentDetails;
 
-    public int getSno() {
-        return sno;
+    public ParentDetails getParentDetails() {
+        return parentDetails;
     }
 
-    public void setSno(int sno) {
-        this.sno = sno;
+    public void setParentDetails(ParentDetails parentDetails) {
+        this.parentDetails = parentDetails;
+    }
+
+    public String getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 
     public String getAddress1() {

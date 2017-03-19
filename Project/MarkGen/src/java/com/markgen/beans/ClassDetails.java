@@ -2,21 +2,56 @@ package com.markgen.beans;
 
 import java.util.List;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Student
- */
 public class ClassDetails {
     private String classId;
-    private int section;
+    private String section;
     private int year;
+    private String regulationId;
     private List<ClassStudentDetails> studentsId;
+    private List<SubjectHandlingFacultyDetails> faculties;
+    private List<SubjectStudentDetails> subjectStudentsList;
+    private List<AdvisorDetails> advisorDetails;
+    private List<StudentList> studentLists;
+
+    public List<StudentList> getStudentLists() {
+        return studentLists;
+    }
+
+    public void setStudentLists(List<StudentList> studentLists) {
+        this.studentLists = studentLists;
+    }
+    
+    public String getRegulationId() {
+        return regulationId;
+    }
+
+    public void setRegulationId(String regulationId) {
+        this.regulationId = regulationId;
+    }
+
+    public List<AdvisorDetails> getAdvisorDetails() {
+        return advisorDetails;
+    }
+
+    public void setAdvisorDetails(List<AdvisorDetails> advisorDetails) {
+        this.advisorDetails = advisorDetails;
+    }
+
+    public List<SubjectHandlingFacultyDetails> getFaculties() {
+        return faculties;
+    }
+
+    public void setFaculties(List<SubjectHandlingFacultyDetails> faculties) {
+        this.faculties = faculties;
+    }
+
+    public List<SubjectStudentDetails> getSubjectStudentsList() {
+        return subjectStudentsList;
+    }
+
+    public void setSubjectStudentsList(List<SubjectStudentDetails> subjectStudentsList) {
+        this.subjectStudentsList = subjectStudentsList;
+    }
 
     public int getYear() {
         return year;
@@ -42,11 +77,11 @@ public class ClassDetails {
         this.classId = classId;
     }
 
-    public int getSection() {
+    public String getSection() {
         return section;
     }
 
-    public void setSection(int section) {
+    public void setSection(String section) {
         this.section = section;
     }
     

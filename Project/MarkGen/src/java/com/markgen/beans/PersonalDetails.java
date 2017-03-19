@@ -13,28 +13,29 @@ import java.util.Date;
  * @author Student
  */
 public class PersonalDetails {
-    private int sno;
-    private String name;
+    private String studentId;
     private String gender;
     private Date dob;
     private String mail;
     private Long mobileNumber;
+    private StudentDetails studentDetails;
 
-    public int getSno() {
-        return sno;
+    public StudentDetails getStudentDetails() {
+        return studentDetails;
     }
 
-    public void setSno(int sno) {
-        this.sno = sno;
+    public void setStudentDetails(StudentDetails studentDetails) {
+        this.studentDetails = studentDetails;
     }
 
-    public String getName() {
-        return name;
+    public String getStudentId() {
+        return studentId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
+    
 
     public String getGender() {
         return gender;
